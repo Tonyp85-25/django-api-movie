@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "actors.apps.ActorsConfig",
     "movies.apps.MoviesConfig",
+    "reviews.apps.ReviewsConfig",
+    "tasks.apps.TasksConfig",
 ]
 
 MIDDLEWARE = [
