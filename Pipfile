@@ -11,6 +11,8 @@ django-filter = "*"
 psycopg2-binary = "*"
 celery = "*"
 redis = "*"
+pyyaml = "*"
+uritemplate = "*"
 
 [dev-packages]
 black = "*"
