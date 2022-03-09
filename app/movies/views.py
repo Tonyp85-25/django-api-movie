@@ -12,5 +12,11 @@ class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
 
-
-# Create your views here.
+    def retrieve(self, request, pk=None):
+        queryset = Movie.objects.all()
+        movie = get_object_or_404(queryset, pk=pk)
+        serializer = MovieSerializer(movie)
+        data = serializer.data
+        reviews = Review.objects.filter(id=movie.id)
+        data["mean_review"] = calculate_mean_review(reviews)
+        return Response(data)
