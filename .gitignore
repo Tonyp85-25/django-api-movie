@@ -4,6 +4,7 @@
 
 .vscode/
 *.env.*
+.idea/
 ### Django ###
 *.log
 *.pot

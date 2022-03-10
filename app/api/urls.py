@@ -24,7 +24,7 @@ from reviews.views import ReviewViewSet
 from movies.views import MovieViewSet
 
 router = routers.DefaultRouter()
-router.register(r"users", ActorViewSet)
+router.register(r"actors", ActorViewSet)
 router.register(r"movies", MovieViewSet)
 router.register(r"reviews", ReviewViewSet)
 
