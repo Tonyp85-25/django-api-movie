@@ -7,15 +7,23 @@ from .models import Review
 
 
 class ReviewSerializer(serializers.ModelSerializer):
-    movie = serializers.StringRelatedField()
+    movie = MovieSerializer
 
     class Meta:
         model = Review
         fields = ["grade", "movie"]
 
     def create(self, validated_data):
-        movie_data = validated_data.pop("movie")
+        # movie_data = validated_data.pop("movie")
         review = Review.objects.create(**validated_data)
-        validate_grade(review)
         sleep_task()
         return review
+
+    def validate_grade(self,value):
+       return  validate_grade(value)
+
+class ReviewPartialSerializer(serializers.Serializer):
+    grade =serializers.FloatField()
+
+    def validate_grade(self,value):
+        return validate_grade(value)
