@@ -13,10 +13,9 @@ celery = "*"
 redis = "*"
 pyyaml = "*"
 uritemplate = "*"
+pytest = "*"
 
 [dev-packages]
 black = "*"
 pytest-django = "*"
 flake8 = "*"
-
-
