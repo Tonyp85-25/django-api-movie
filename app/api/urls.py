@@ -47,4 +47,6 @@ urlpatterns = [
         ),
         name="openapi-schema",
     ),
+    path("",TemplateView.as_view(
+            template_name="home.html")),
 ]
