@@ -14,9 +14,10 @@ redis = "*"
 pyyaml = "*"
 uritemplate = "*"
 
-
 [dev-packages]
 black = "*"
 pytest-django = "*"
 flake8 = "*"
 pytest = "*"
+pytest-cov = "*"
+factory-boy = "*"
