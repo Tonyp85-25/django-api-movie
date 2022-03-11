@@ -63,4 +63,4 @@ class TestReviewSerializer:
         serializer = ReviewSerializer(data=valid_serialized_data)
 
         assert serializer.is_valid()
-        assert serializer.errors == {}
+        # assert serializer.errors == {}
